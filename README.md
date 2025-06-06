@@ -1,7 +1,7 @@
 # Operation and Maintenance (OAM) Controller
 
 This repository contains code artifctes related to an OAM Controller, which
-terminats the O-RAN Alliance Interfaces O1 and OpenFronthaul Management Plane.
+terminates the O-RAN Alliance Interfaces O1 and OpenFronthaul Management Plane.
 
 ## Get stated
 
@@ -44,3 +44,7 @@ make docs
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+# Important Info
+- oam-controller is using parts from onap ccsdk project
+- "Fork" reference is ccsdk-parent 3.1.1: https://gerrit.onap.org/r/gitweb?p=ccsdk/parent.git;a=tag;h=ef4a562efe380089eb8fd34e768119f8124a506c
