@@ -74,22 +74,6 @@
                 <artifactId>Java-WebSocket</artifactId>
                 <version>1.5.2</version>
             </dependency>
-            <!-- sdnr package dependencies -->
-            <dependency>
-                <groupId>org.elasticsearch.client</groupId>
-                <artifactId>elasticsearch-rest-client</artifactId>
-                <version>7.13.4</version>
-            </dependency>
-            <dependency>
-                <groupId>org.onap.dmaap.messagerouter.dmaapclient</groupId>
-                <artifactId>dmaapClient</artifactId>
-                <version>1.1.14</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.kafka</groupId>
-                <artifactId>kafka-clients</artifactId>
-                <version>3.7.0</version>
-            </dependency>
             <!-- Below provides javax.annotations -->
             <dependency>
                 <groupId>com.google.code.findbugs</groupId>
