@@ -1,0 +1,22 @@
+{
+    "tokenSecret": "file:///src/test/resources/jwtRS512.key",
+    "tokenPubKey": "file:///src/test/resources/jwtRS512.key.pub",
+    "algorithm":"RS512",
+    "tokenIssuer": "ONAP SDNC",
+    "publicUrl": "http://nasp.diasf.de",
+    "redirectUri": "/index.html#redirect=",
+    "supportOdlUsers": "true",
+    "tokenLifetime":3600,
+    "providers": [
+        {
+            "id": "keycloak",
+            "type": "KEYCLOAK",
+            "url": "http://10.20.11.160:8080",
+            "clientId": "odlux.app",
+            "secret": "5da4ea3d-8cc9-4669-bd7e-3ecb91d120cd",
+            "scope": "openid",
+            "title": "OSNL Keycloak Provider",
+            "realmName":"onap"
+        }
+    ]
+}
