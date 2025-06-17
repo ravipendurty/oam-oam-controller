@@ -30,9 +30,9 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
-    - name: Install Maven 3.9.9
+    - name: Install Maven 3.9.10
       run: |
-          MAVEN_VERSION=3.9.9
+          MAVEN_VERSION=3.9.10
           curl -sL https://downloads.apache.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xz
           sudo mv apache-maven-$MAVEN_VERSION /opt/maven
           echo "MAVEN_HOME=/opt/maven" >> $GITHUB_ENV
