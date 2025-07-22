@@ -38,5 +38,13 @@ dist:
 	mvn clean install -f distribution/oam-controller/pom.xml -s settings.xml
 	mvn clean install -f distribution/oam-controller-web/pom.xml -s settings.xml
 
+## deploy				Deploy artifacts to some artifact repository like nexus, jfrog, github packages etc.
+deploy:
+	mvn clean deploy -f parents/pom.xml -s settings.xml
+	mvn clean deploy -f features/sdnr/wt/pom.xml -s settings.xml
+	mvn clean deploy -f features/sdnr/odlux/pom.xml -s settings.xml
+	mvn clean deploy -f distribution/oam-controller/pom.xml -s settings.xml
+
 ## all:                 Build features and images
-all: parents features-wt features-odlux dist
+build: parents features-wt features-odlux dist
+
