@@ -52,7 +52,7 @@ committers:
     - name: 'Ravi Pendurty'
       email: 'ravi.pendurty@highstreet-technologies.com'
       company: 'highstreet technologies'
-      id: 'ravi.pendurty'
+      id: 'pendurty'
       timezone: 'India/Bangalore'
 tsc:
     # yamllint disable-line rule:line-length
