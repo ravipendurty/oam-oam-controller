@@ -12,14 +12,14 @@ on:
         description: "Branch that change is against"
         required: true
         type: string
-      GERRIT_CHANGE_ID:
-        description: "The ID for the change"
-        required: true
-        type: string
-      GERRIT_CHANGE_NUMBER:
-        description: "The Gerrit number"
-        required: true
-        type: string
+      # GERRIT_CHANGE_ID:
+      #   description: "The ID for the change"
+      #   required: true
+      #   type: string
+      # GERRIT_CHANGE_NUMBER:
+      #   description: "The Gerrit number"
+      #   required: true
+      #   type: string
       GERRIT_CHANGE_URL:
         description: "URL to the change"
         required: true
@@ -69,8 +69,8 @@ jobs:
     uses: ravipendurty/releng-reusable-workflows/.github/workflows/compose-make-merge.yaml@main
     with:
       GERRIT_BRANCH: ${{ inputs.GERRIT_BRANCH }}
-      GERRIT_CHANGE_ID: ${{ inputs.GERRIT_CHANGE_ID }}
-      GERRIT_CHANGE_NUMBER: ${{ inputs.GERRIT_CHANGE_NUMBER }}
+      # GERRIT_CHANGE_ID: ${{ inputs.GERRIT_CHANGE_ID }}
+      # GERRIT_CHANGE_NUMBER: ${{ inputs.GERRIT_CHANGE_NUMBER }}
       GERRIT_CHANGE_URL: ${{ inputs.GERRIT_CHANGE_URL }}
       GERRIT_EVENT_TYPE: ${{ inputs.GERRIT_EVENT_TYPE }}
       GERRIT_PATCHSET_NUMBER: ${{ inputs.GERRIT_PATCHSET_NUMBER }}
