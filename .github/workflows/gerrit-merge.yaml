@@ -61,8 +61,12 @@ jobs:
   #       run: echo "result=${GERRIT_PROJECT//\//-}" >> $GITHUB_OUTPUT
   #       env:
   #         GERRIT_PROJECT: ${{ inputs.GERRIT_PROJECT }}
-
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v4
   maven-merge:
+    needs: [checkout]
     # needs: [sanitize]
     # use compose-jjb-verify from the v0.4 series of releng-reusable-workflows
     # yamllint disable-line rule:line-length
