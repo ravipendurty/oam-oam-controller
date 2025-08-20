@@ -40,10 +40,10 @@ dist:
 
 ## deploy				Deploy artifacts to some artifact repository like nexus, jfrog, github packages etc.
 deploy:
-	mvn clean deploy -f parents/pom.xml -s settings.xml
-	mvn clean deploy -f features/sdnr/wt/pom.xml -s settings.xml
-	mvn clean deploy -f features/sdnr/odlux/pom.xml -s settings.xml
-	mvn clean deploy -f distribution/oam-controller/pom.xml -s settings.xml
+	mvn clean install -f parents/pom.xml -Dmaven.repo.local=${GITHUB_WORKSPACE}/m2repo
+	mvn clean install -f features/sdnr/wt/pom.xml -Dmaven.repo.local=${GITHUB_WORKSPACE}/m2repo
+	mvn clean install -f features/sdnr/odlux/pom.xml -Dmaven.repo.local=${GITHUB_WORKSPACE}/m2repo
+	mvn clean install -f distribution/oam-controller/pom.xml -Dmaven.repo.local=${GITHUB_WORKSPACE}/m2repo
 
 ## all:                 Build features and images
 build: parents features-wt features-odlux dist
