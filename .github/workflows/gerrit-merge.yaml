@@ -82,6 +82,6 @@ jobs:
       MAKE_TARGETS: "deploy"
       PUSH_NEXUS: true
       # yamllint enable rule:line-length
-      ENV_VARS: ${{ toJSON(vars) }}
+      # ENV_VARS: ${{ toJSON(vars) }}
 
   
