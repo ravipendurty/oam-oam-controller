@@ -12,14 +12,14 @@ on:
         description: "Branch that change is against"
         required: true
         type: string
-      # GERRIT_CHANGE_ID:
-      #   description: "The ID for the change"
-      #   required: true
-      #   type: string
-      # GERRIT_CHANGE_NUMBER:
-      #   description: "The Gerrit number"
-      #   required: true
-      #   type: string
+      GERRIT_CHANGE_ID:
+        description: "The ID for the change"
+        required: true
+        type: string
+      GERRIT_CHANGE_NUMBER:
+        description: "The Gerrit number"
+        required: true
+        type: string
       GERRIT_CHANGE_URL:
         description: "URL to the change"
         required: true
