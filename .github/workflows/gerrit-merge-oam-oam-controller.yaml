@@ -8,22 +8,22 @@ name: Gerrit Composed Maven Merge
 on:
   workflow_dispatch:
     inputs:
-      # GERRIT_BRANCH:
-      #   description: "Branch that change is against"
-      #   required: true
-      #   type: string
-      # GERRIT_CHANGE_ID:
-      #   description: "The ID for the change"
-      #   required: true
-      #   type: string
+      GERRIT_BRANCH:
+        description: "Branch that change is against"
+        required: true
+        type: string
+      GERRIT_CHANGE_ID:
+        description: "The ID for the change"
+        required: true
+        type: string
       GERRIT_CHANGE_NUMBER:
         description: "The Gerrit number"
         required: true
         type: string
-      # GERRIT_CHANGE_URL:
-      #   description: "URL to the change"
-      #   required: true
-      #   type: string
+      GERRIT_CHANGE_URL:
+        description: "URL to the change"
+        required: true
+        type: string
       GERRIT_EVENT_TYPE:
         description: "Type of Gerrit event"
         required: true
