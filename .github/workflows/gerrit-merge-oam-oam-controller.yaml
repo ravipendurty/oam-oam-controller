@@ -82,9 +82,9 @@ jobs:
 
   maven-merge:
     needs: [notify, sanitize]
-    # use compose-jjb-verify from the v0.4 series of releng-reusable-workflows
-    # yamllint disable-line rule:line-length
     uses: ravipendurty/releng-reusable-workflows/.github/workflows/compose-make-merge.yaml@main
+    secrets:                                                 # forward secrets
+      NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
     with:
       # GERRIT_BRANCH: ${{ inputs.GERRIT_BRANCH }}
       # GERRIT_CHANGE_ID: ${{ inputs.GERRIT_CHANGE_ID }}
