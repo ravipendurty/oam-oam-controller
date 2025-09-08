@@ -26,8 +26,8 @@
         <odl.ops4j.version>8.0.27</odl.ops4j.version>
         <!--         <frinx.subtree.version>V4.20210208</frinx.subtree.version> -->
         <ccsdk.features.version>${project.version}</ccsdk.features.version>
-        <ccsdk.feature.groupid>org.o-ran-sc.oam-controller.features.sdnr.wt</ccsdk.feature.groupid>
-        <ccsdk.feature.repopath>system/org/o-ran-sc/oam-controller/features/sdnr/wt</ccsdk.feature.repopath>
+        <ccsdk.feature.groupid>org.o-ran-sc.oam-oam-controller.features.sdnr.wt</ccsdk.feature.groupid>
+        <ccsdk.feature.repopath>system/org/o-ran-sc/oam-oam-controller/features/sdnr/wt</ccsdk.feature.repopath>
         <ccsdk.project.version>${project.version}</ccsdk.project.version>
         <ccsdk.build.timestamp>${maven.build.timestamp}</ccsdk.build.timestamp>
         <!-- Below not used -->
@@ -41,11 +41,11 @@
     <distributionManagement>
         <repository>
             <id>o-ran-sc-releases</id>
-            <url>${o-ran-sc.nexus.release-url}</url>
+            <url>https://nexus.o-ran-sc.org/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
             <id>o-ran-sc-snapshots</id>
-            <url>${o-ran-sc.nexus.snapshot-url}</url>
+            <url>https://nexus.o-ran-sc.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 
