@@ -44,6 +44,7 @@ deploy:
 	mvn clean deploy -f features/sdnr/wt/pom.xml -s settings.xml
 	mvn clean deploy -f features/sdnr/odlux/pom.xml -s settings.xml
 	mvn clean deploy -f distribution/oam-controller/pom.xml -s settings.xml
+	mvn clean deploy -f distribution/oam-controller-web/pom.xml -s settings.xml
 
 ## all:                 Build features and images
 build: parents features-wt features-odlux dist
