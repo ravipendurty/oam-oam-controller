@@ -22,6 +22,17 @@
         <docker.verbose>true</docker.verbose>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>o-ran-sc-releases</id>
+            <url>https://nexus.o-ran-sc.org/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>o-ran-sc-snapshots</id>
+            <url>https://nexus.o-ran-sc.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.o-ran-sc.oam-oam-controller.features.sdnr.odlux</groupId>

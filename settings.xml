@@ -165,7 +165,7 @@
 	</activeProfiles>
 	<servers>
 		<server>
-            <id>nexus3.o-ran-sc.org</id>
+            <id>nexus3.o-ran-sc.org:10003</id>
             <username>oam-oam-controller</username>
             <password>${env.NEXUS_PASSWORD}</password>
         </server>
