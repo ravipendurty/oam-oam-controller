@@ -1,6 +1,6 @@
 ---
 # SPDX-License-Identifier: Apache-2.0
-# SPDX-FileCopyrightText: 2024 The Linux Foundation
+# SPDX-FileCopyrightText: 2025 The Linux Foundation
 
 name: Gerrit Composed Maven Merge
 
@@ -82,25 +82,16 @@ jobs:
 
   maven-merge:
     needs: [notify, sanitize]
-    uses: ravipendurty/releng-reusable-workflows/.github/workflows/compose-make-merge.yaml@main
+    uses: lfit/releng-reusable-workflows/.github/workflows/compose-make-merge.yaml@f318aaac9f4fce73a8059fe95ba9080833e018c2
     secrets:                                                 # forward secrets
       NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
     with:
-      # GERRIT_BRANCH: ${{ inputs.GERRIT_BRANCH }}
-      # GERRIT_CHANGE_ID: ${{ inputs.GERRIT_CHANGE_ID }}
-      # GERRIT_CHANGE_NUMBER: ${{ inputs.GERRIT_CHANGE_NUMBER }}
-      # GERRIT_CHANGE_URL: ${{ inputs.GERRIT_CHANGE_URL }}
-      GERRIT_EVENT_TYPE: ${{ inputs.GERRIT_EVENT_TYPE }}
-      GERRIT_PATCHSET_NUMBER: ${{ inputs.GERRIT_PATCHSET_NUMBER }}
-      GERRIT_PATCHSET_REVISION: ${{ inputs.GERRIT_PATCHSET_REVISION }}
-      GERRIT_PROJECT: ${{ github.repository_owner }}/${{ needs.sanitize.outputs.sanitized_project }}
+      GERRIT_BRANCH: ${{ inputs.GERRIT_BRANCH }}
+      GERRIT_CHANGE_ID: ${{ inputs.GERRIT_CHANGE_ID }}
       GERRIT_REFSPEC: ${{ inputs.GERRIT_REFSPEC }}
       JDK_VERSION: "21"
       MVN_VERSION: "3.9.6"
       MAKE_TARGETS: "deploy"
-      PUSH_NEXUS: true
-      # yamllint enable rule:line-length
-      ENV_VARS: ${{ toJSON(vars) }}
 
   report-status:
     if: ${{ always() }}

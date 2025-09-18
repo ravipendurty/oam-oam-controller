@@ -34,8 +34,10 @@ if ( project.properties['ccsdk.project.version'].endsWith("-SNAPSHOT") ) {
 	project.properties['project.docker.latestminortag.version']=versionArray[0] + '.' + versionArray[1] + "-SNAPSHOT-latest";
 	project.properties['project.docker.latestfulltag.version']=versionArray[0] + '.' + versionArray[1] + '.' + patchArray[0] + "-SNAPSHOT-latest";
 	project.properties['project.docker.latesttagtimestamp.version']=versionArray[0] + '.' + versionArray[1] + '.' + patchArray[0] + "-SNAPSHOT-"+project.properties['ccsdk.build.timestamp'];
+	project.properties['docker.push.registry']=project.properties['docker.snapshot.registry'];
 } else {
 	project.properties['project.docker.latestminortag.version']=versionArray[0] + '.' + versionArray[1] + "-STAGING-latest";
 	project.properties['project.docker.latestfulltag.version']=versionArray[0] + '.' + versionArray[1] + '.' + versionArray[2] + "-STAGING-latest";
 	project.properties['project.docker.latesttagtimestamp.version']=versionArray[0] + '.' + versionArray[1] + '.' + versionArray[2] + "-STAGING-"+project.properties['ccsdk.build.timestamp'];
+	project.properties['docker.push.registry']=project.properties['docker.release.registry'];
 }

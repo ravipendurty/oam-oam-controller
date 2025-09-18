@@ -169,6 +169,11 @@
             <username>oam-oam-controller</username>
             <password>${env.NEXUS_PASSWORD}</password>
         </server>
+		<server>
+            <id>nexus3.o-ran-sc.org:10002</id>
+            <username>oam-oam-controller</username>
+            <password>${env.NEXUS_PASSWORD}</password>
+        </server>
         <server>
             <id>o-ran-sc-releases</id>
             <username>oam-oam-controller</username>
