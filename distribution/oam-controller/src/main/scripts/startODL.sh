@@ -107,9 +107,7 @@ install_sdnrwt_features() {
     if $SDNRONLY; then
       cleanupFeatureBoot
     fi
-    if $SDNRUNMDM; then
-      addToFeatureBoot "$SDNRDM_UNM_BOOTFEATURES"
-    else
+    if $SDNRDM; then
       addToFeatureBoot "$SDNRDM_BOOTFEATURES"
   #    if ! $SDNRDM; then
   #      addToFeatureBoot "$SDNRODLUX_BOOTFEATURES"
@@ -255,7 +253,6 @@ GEO_ENABLED=${GEO_ENABLED:-false}
 
 SDNRWT=${SDNRWT:-false}
 SDNRDM=${SDNRDM:-false}
-SDNRUNMDM=${SDNRUNMDM:-false}
 #SDNRODLUX_BOOTFEATURES=${SDNRODLUX_BOOTFEATURES:-sdnr-wt-helpserver-feature,sdnr-wt-odlux-core-feature,sdnr-wt-odlux-apps-feature}
 SDNROAUTH_BOOTFEATURES=${SDNROAUTH_BOOTFEATURES:-sdnr-wt-feature-aggregator-oauth}
 SDNR_NETCONF_CALLHOME_ENABLED=${SDNR_NETCONF_CALLHOME_ENABLED:-false}
@@ -263,7 +260,6 @@ SDNR_NETCONF_CALLHOME_ENABLED=${SDNR_NETCONF_CALLHOME_ENABLED:-false}
 # Add devicemanager features
 SDNRDM_SDM_LIST=${SDNRDM_SDM_LIST:-sdnr-wt-feature-aggregator-devicemanager}
 SDNRDM_BOOTFEATURES=${SDNRDM_BOOTFEATURES:-sdnr-wt-feature-aggregator-devicemanager-base,${SDNRDM_SDM_LIST}}
-SDNRDM_UNM_BOOTFEATURES=${SDNRDM_UNM_BOOTFEATURES:-sdnr-wt-feature-aggregator-devicemanager-base,sdnr-wt-feature-aggregator-devicemanager-unm-generic}
 
 # Whether to Initialize the ElasticSearch DB.
 SDNRINIT=${SDNRINIT:-false}
@@ -316,7 +312,6 @@ printf "%s\n" "  ENABLE_OAUTH=$ENABLE_OAUTH"
 printf "%s\n" "  ENABLE_ODLUX_RBAC=$ENABLE_ODLUX_RBAC"
 printf "%s\n" "  SDNRWT=$SDNRWT"
 printf "%s\n" "  SDNRDM=$SDNRDM"
-printf "%s\n" "  SDNRUNMDM=$SDNRUNMDM"
 printf "%s\n" "  SDNRONLY=$SDNRONLY"
 printf "%s\n" "  SDNRINIT=$SDNRINIT"
 printf "%s\n" "  SDNRDBURL=$SDNRDBURL"
@@ -410,7 +405,7 @@ then
   if $SDNRWT ; then install_sdnrwt_features ; fi
   
   if $ENABLE_OAUTH ; then
-    cp $SDNC_HOME/data/oauth-aaa-app-config.xml $(find $ODL_HOME/system/org/opendaylight/aaa/ -name *aaa-app-config.xml)
+    cp $ODL_HOME/etc/oauth-aaa-app-config.xml $(find $ODL_HOME/system/org/opendaylight/aaa/ -name *aaa-app-config.xml)
     echo -e "\norg.ops4j.pax.web.session.cookie.comment = disable" >> $ODL_HOME/etc/org.ops4j.pax.web.cfg
     install_sdnr_oauth_features
   fi

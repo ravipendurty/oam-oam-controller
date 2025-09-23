@@ -43,7 +43,7 @@
     <modules>
         <module>oauth-core</module>
         <module>oauth-realm</module>
-	    <module>oauth-web</module>
+        <module>oauth-web</module>
         <module>oauth-cli</module>
     </modules>
 

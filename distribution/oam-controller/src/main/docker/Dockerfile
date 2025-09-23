@@ -11,7 +11,6 @@ ENV FEATURES_SDNR ${ccsdk.feature.repopath}
 ENV SDNR_DM_REPO mvn:${CCSDKFEATURE_SDNR_GROUPID}/sdnr-wt-feature-aggregator/${CCSDKFEATUREVERSION}/xml/features, \
     mvn:${CCSDKFEATURE_SDNR_GROUPID}/sdnr-wt-feature-aggregator-devicemanager-base/${CCSDKFEATUREVERSION}/xml/features, \
     mvn:${CCSDKFEATURE_SDNR_GROUPID}/sdnr-wt-feature-aggregator-devicemanager/${CCSDKFEATUREVERSION}/xml/features, \
-    mvn:${CCSDKFEATURE_SDNR_GROUPID}/sdnr-wt-feature-aggregator-devicemanager-unm-generic/${CCSDKFEATUREVERSION}/xml/features, \
     mvn:${CCSDKFEATURE_SDNR_GROUPID}/sdnr-wt-feature-aggregator-oauth/${CCSDKFEATUREVERSION}/xml/features
 
 ENV SDNR_FEATURES_BOOT_INITIAL odl-restconf-all,odl-netconf-topology,odl-netconf-callhome-ssh,odl-mdsal-all,odl-mdsal-apidocs,odl-daexim-all,odl-restconf-nb-rfc8040
