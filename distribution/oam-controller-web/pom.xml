@@ -11,8 +11,8 @@
     <description>Creates SDN Controller WebUI Docker container</description>
 
     <properties>
-        <base.image.repo>docker.io/bitnami/nginx:1.25-debian-12</base.image.repo>
-	    <image.name>o-ran-sc/oam-oam-controller/sdnr-web-image</image.name>
+        <base.image.repo>docker.io/bitnamilegacy/nginx:1.25-debian-12</base.image.repo>
+        <image.name>o-ran-sc/oam-oam-controller/sdnr-web-image</image.name>
         <sdnc.project.version>${project.version}</sdnc.project.version>
         <odlux.features.version>13.0.0-SNAPSHOT</odlux.features.version>
         <sdnc.build.timestamp>${maven.build.timestamp}</sdnc.build.timestamp>
