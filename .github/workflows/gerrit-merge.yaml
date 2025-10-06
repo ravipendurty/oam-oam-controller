@@ -126,3 +126,7 @@ jobs:
           gerrit-change-number: ${{ inputs.GERRIT_CHANGE_NUMBER }}
           gerrit-patchset-number: ${{ inputs.GERRIT_PATCHSET_NUMBER }}
           comment-only: "true"
+          # neutral, success, skipped, cancelled, timed_out, action_required, failure
+          # TODO: vote-type understands only "success", "failure", "cancelled" and "clear". Hence, the other values need to be somehow mapped
+          # to "vote-type" values.
+          vote-type: ${{ env.WORKFLOW_CONCLUSION }}
