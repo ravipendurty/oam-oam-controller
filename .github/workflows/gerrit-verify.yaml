@@ -56,7 +56,7 @@ jobs:
     steps:
       - name: Clear votes
         # yamllint disable-line rule:line-length
-        uses: lfit/gerrit-review-action@9627b9a144f2a2cad70707ddfae87c87dce60729 # v0.8
+        uses: lfit/gerrit-review-action@9627b9a144f2a2cad70707ddfae87c87dce60729  # v0.8
         with:
           host: ${{ vars.GERRIT_SERVER }}
           username: ${{ vars.GERRIT_SSH_USER }}
@@ -90,6 +90,7 @@ jobs:
         with:
           GERRIT_BRANCH: ${{ inputs.GERRIT_BRANCH }}
           GERRIT_CHANGE_ID: ${{ inputs.GERRIT_CHANGE_ID }}
+          # yamllint disable-line rule:line-length
           GERRIT_PROJECT: ${{ github.repository_owner }}/${{ needs.sanitize.outputs.sanitized_project }}
           GERRIT_REFSPEC: ${{ inputs.GERRIT_REFSPEC }}
           JDK_VERSION: "21"
@@ -100,7 +101,7 @@ jobs:
       - name: Run tests
         run: CICD/bin/setup.sh
       - name: Print test log
-        if: always()
+        if: ${{ always() }}
         run: |
           echo "Test log dump - START"
           cat CICD/log/testsuite.log
