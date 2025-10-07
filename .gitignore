@@ -63,4 +63,3 @@ package-lock.json
 
 #tmp directory
 CICD/tmp
-CICD/log/testsuite.log
